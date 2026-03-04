@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ── Reset & Base ──────────────────────────────── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  transition: border-color 0.3s;
+}
+
+a:hover {
+  border-bottom-color: #fff;
+}
+
+/* ── Layout ────────────────────────────────────── */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: 60px 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+/* ── Navigation ────────────────────────────────── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+nav .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding: 16px 24px;
+}
+
+nav a {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: none;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+/* ── Hero ──────────────────────────────────────── */
+.hero {
+  padding: 160px 0 80px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.hero .subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero .location {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  opacity: 0.4;
+}
+
+.hero .links {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.hero .links a {
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+.hero .links a:hover {
+  opacity: 1;
+}
+
+/* ── Section Titles ────────────────────────────── */
+.section-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.35;
+  margin-bottom: 40px;
+}
+
+/* ── About ─────────────────────────────────────── */
+.about p {
+  font-size: 1rem;
+  line-height: 1.8;
+  opacity: 0.75;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ── Skills ────────────────────────────────────── */
+.skill-group {
+  margin-bottom: 28px;
+}
+
+.skill-group:last-child {
+  margin-bottom: 0;
+}
+
+.skill-group h3 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin-bottom: 10px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.skill-tags span {
+  font-size: 0.8rem;
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 100px;
+  opacity: 0.7;
+  transition: opacity 0.3s, border-color 0.3s;
+}
+
+.skill-tags span:hover {
+  opacity: 1;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ── Experience ────────────────────────────────── */
+.experience-item {
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.experience-item:last-child {
+  margin-bottom: 0;
+}
+
+.experience-item .period {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.35;
+  margin-bottom: 6px;
+}
+
+.experience-item h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.experience-item .role {
+  font-size: 0.85rem;
+  opacity: 0.5;
+  margin-bottom: 14px;
+}
+
+.experience-item ul {
+  list-style: none;
+  text-align: center;
+}
+
+.experience-item li {
+  font-size: 0.88rem;
+  opacity: 0.65;
+  line-height: 1.7;
+  margin-bottom: 6px;
+  padding: 0 10px;
+}
+
+.experience-item li::before {
+  content: '—  ';
+  opacity: 0.3;
+}
+
+/* ── Projects ──────────────────────────────────── */
+.project-item {
+  margin-bottom: 40px;
+}
+
+.project-item:last-child {
+  margin-bottom: 0;
+}
+
+.project-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.project-item .project-role {
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin-bottom: 10px;
+}
+
+.project-item p {
+  font-size: 0.88rem;
+  opacity: 0.65;
+  line-height: 1.7;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ── Education ─────────────────────────────────── */
+.education-item {
+  margin-bottom: 24px;
+}
+
+.education-item:last-child {
+  margin-bottom: 0;
+}
+
+.education-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.education-item .year {
+  font-size: 0.8rem;
+  opacity: 0.4;
+}
+
+/* ── Footer ────────────────────────────────────── */
+footer {
+  padding: 40px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.78rem;
+  opacity: 0.25;
+}
+
+/* ── Responsive ────────────────────────────────── */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  nav .container {
+    gap: 18px;
+  }
+
+  nav a {
+    font-size: 0.7rem;
+  }
+
+  section {
+    padding: 44px 0;
+  }
+}
