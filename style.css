@@ -265,6 +265,24 @@ nav a:hover {
   margin: 0 auto;
 }
 
+.demo-link {
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-left: 8px;
+  color: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.demo-link:hover {
+  color: #fff;
+  border-bottom-style: solid;
+}
+
 /* ── Education ─────────────────────────────────── */
 .education-item {
   margin-bottom: 24px;
